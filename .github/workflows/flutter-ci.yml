@@ -20,5 +20,7 @@ on:
 jobs:
   run-ci:
     uses: ./.github/workflows/flutter-build.yml
+    secrets: inherit
     with:
-      upload-artifact: false
+      upload-artifact: ${{ github.event_name != 'pull_request' }}
+      upload-tag: nightly
