@@ -101,6 +101,16 @@ const RESTART_REMOTE_DEVICE_GRACE: Duration = Duration::from_secs(5 * 60);
 pub const VIDEO_QUEUE_SIZE: usize = 120;
 const MAX_DECODE_FAIL_COUNTER: usize = 3;
 
+// Open-source rustdesk-server (hbbs) does not implement the client<->server E2EE
+// handshake (KeyExchange), so securing this TCP connection only ends in
+// "Failed to secure tcp: deadline has elapsed" once the user is logged in.
+// The key is still validated through the punch hole / relay request's
+// licence_key. Set to true when the server supports the handshake, e.g.
+// RustDesk Server Pro or the official server.
+pub(crate) fn server_e2ee_handshake_enabled() -> bool {
+    false
+}
+
 pub const LOGIN_MSG_PASSWORD_EMPTY: &str = "Empty Password";
 pub const LOGIN_MSG_PASSWORD_WRONG: &str = "Wrong Password";
 pub const LOGIN_MSG_2FA_WRONG: &str = "Wrong 2FA Code";
@@ -415,7 +425,10 @@ impl Client {
         };
 
         let switch_code = interface.get_switch_code();
-        if !key.is_empty() && (!token.is_empty() || !switch_code.is_empty()) {
+        if server_e2ee_handshake_enabled()
+            && !key.is_empty()
+            && (!token.is_empty() || !switch_code.is_empty())
+        {
             secure_tcp(&mut socket, &key)
                 .await
                 .map_err(|e| anyhow!("Failed to secure tcp: {}", e))?;
@@ -847,7 +860,10 @@ impl Client {
                 .await
                 .with_context(|| "Failed to connect to rendezvous server")?;
 
-            if !key.is_empty() && (!token.is_empty() || !switch_code.is_empty()) {
+            if server_e2ee_handshake_enabled()
+                && !key.is_empty()
+                && (!token.is_empty() || !switch_code.is_empty())
+            {
                 secure_tcp(&mut socket, key).await?;
             }
 
@@ -4086,7 +4102,9 @@ async fn hc_connection_(
     let host = check_port(&rendezvous_server, RENDEZVOUS_PORT);
     let mut conn = connect_tcp(host.clone(), CONNECT_TIMEOUT).await?;
     let key = crate::get_key(true).await;
-    crate::secure_tcp(&mut conn, &key).await?;
+    if server_e2ee_handshake_enabled() {
+        crate::secure_tcp(&mut conn, &key).await?;
+    }
     let mut msg_out = RendezvousMessage::new();
     msg_out.set_hc(HealthCheck {
         token,

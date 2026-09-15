@@ -420,7 +420,9 @@ impl RendezvousMediator {
         log::info!("start tcp: {}", hbb_common::websocket::check_ws(&host));
         let mut conn = connect_tcp(host.clone(), CONNECT_TIMEOUT).await?;
         let key = crate::get_key(true).await;
-        crate::secure_tcp(&mut conn, &key).await?;
+        if crate::client::server_e2ee_handshake_enabled() {
+            crate::secure_tcp(&mut conn, &key).await?;
+        }
         let mut rz = Self {
             addr: conn.local_addr().into_target_addr()?,
             host: host.clone(),
