@@ -376,7 +376,7 @@ pub fn get_update_download_file_from_url(url: &str) -> Option<PathBuf> {
     let tag = segments.next()?;
     let filename = segments.next()?;
 
-    if owner != "rustdesk"
+    if owner != "Sunev"
         || repo != "rustdesk"
         || releases != "releases"
         || download != "download"
