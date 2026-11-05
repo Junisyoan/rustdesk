@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", ""),
         ("Relay fallback delay in seconds", ""),
         ("relay-fallback-delay-tip", ""),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", ""),
         ("Keyboard shortcuts", ""),
         ("Configure shortcuts...", ""),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", ""),
         ("Renew trust", ""),
         ("install-directory-not-empty-tip", ""),
->>>>>>> master
     ].iter().cloned().collect();
 }

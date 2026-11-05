@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "RustDesk n'a pas pu charger un composant GStreamer nécessaire à la capture d'écran ({})"),
         ("Relay fallback delay in seconds", "Délai avant bascule vers le relais en secondes"),
         ("relay-fallback-delay-tip", "Durée pendant laquelle une connexion relais déjà établie attend la connexion directe WebRTC avant d'être utilisée à sa place. Augmentez-la pour laisser plus de temps à une connexion directe lente ; diminuez-la pour basculer plus tôt vers le relais sur les réseaux où une connexion directe est impossible. Laissez vide pour la valeur par défaut de 2.5 secondes."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Pour démarrer un appel vocal, activez « Capture de l’audio » dans la page « Partage d’écran »."),
         ("Keyboard shortcuts", "Raccourcis clavier"),
         ("Configure shortcuts...", "Configurer les raccourcis…"),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Durée de confiance (jours)"),
         ("Renew trust", "Renouveler la confiance"),
         ("install-directory-not-empty-tip", "Le dossier sélectionné n’est pas vide. L’installation peut supprimer des données existantes. Envisagez de choisir un autre dossier."),
->>>>>>> master
     ].iter().cloned().collect();
 }

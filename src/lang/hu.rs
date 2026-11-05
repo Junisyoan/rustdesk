@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "A RustDesk nem tudta betölteni a képernyőrögzítéshez szükséges GStreamer összetevőt ({})"),
         ("Relay fallback delay in seconds", "Késleltetés a továbbítóra váltás előtt másodpercben"),
         ("relay-fallback-delay-tip", "Mennyi ideig vár a már létrejött továbbító kapcsolat a közvetlen WebRTC kapcsolatra, mielőtt helyette használnák. Növelje, hogy a lassú közvetlen kapcsolatnak több ideje legyen; csökkentse, hogy olyan hálózatokon, ahol közvetlen kapcsolat nem hozható létre, hamarabb váltson továbbítóra. Hagyja üresen az alapértelmezett 2.5 másodperchez."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Hanghívás indításához engedélyezze a „Hangrögzítés” opciót a „Képernyőmegosztás” oldalon."),
         ("Keyboard shortcuts", "Billentyűparancsok"),
         ("Configure shortcuts...", "Billentyűparancsok beállítása..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Megbízhatóság időtartama (nap)"),
         ("Renew trust", "Megbízhatóság megújítása"),
         ("install-directory-not-empty-tip", "A kiválasztott mappa nem üres. A telepítés törölheti a meglévő adatokat. Fontolja meg egy másik mappa kiválasztását."),
->>>>>>> master
     ].iter().cloned().collect();
 }

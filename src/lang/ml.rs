@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "സ്ക്രീൻ പകർത്താൻ ആവശ്യമായ GStreamer ഘടകം RustDesk-ന് ലോഡ് ചെയ്യാനായില്ല ({})"),
         ("Relay fallback delay in seconds", "റിലേയിലേക്ക് മാറുന്നതിനുള്ള കാലതാമസം സെക്കൻഡിൽ"),
         ("relay-fallback-delay-tip", "ഇതിനകം സ്ഥാപിതമായ റിലേ കണക്ഷൻ നേരിട്ടുള്ള WebRTC കണക്ഷനായി എത്ര നേരം കാത്തിരിക്കുന്നു, അതിനുശേഷം അതിനുപകരം ഉപയോഗിക്കുന്നു. മന്ദഗതിയിലുള്ള നേരിട്ടുള്ള കണക്ഷന് കൂടുതൽ സമയം നൽകാൻ വർദ്ധിപ്പിക്കുക; നേരിട്ടുള്ള കണക്ഷൻ സാധ്യമല്ലാത്ത നെറ്റ്‌വർക്കുകളിൽ വേഗത്തിൽ റിലേയിലേക്ക് മാറാൻ കുറയ്ക്കുക. സ്ഥിരസ്ഥിതിയായ 2.5 സെക്കൻഡിനായി ശൂന്യമാക്കിയിടുക."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "വോയിസ് കോൾ തുടങ്ങാൻ, “സ്ക്രീൻ പങ്കിടുക” പേജിൽ “ഓഡിയോ ക്യാപ്ചർ” ഓൺ ചെയ്യുക."),
         ("Keyboard shortcuts", "കീബോർഡ് ഷോർട്ട്കട്ടുകൾ"),
         ("Configure shortcuts...", "ഷോർട്ട്കട്ടുകൾ ക്രമീകരിക്കുക..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "വിശ്വാസ കാലാവധി (ദിവസം)"),
         ("Renew trust", "വിശ്വാസം പുതുക്കുക"),
         ("install-directory-not-empty-tip", "തിരഞ്ഞെടുത്ത ഫോൾഡർ ശൂന്യമല്ല. ഇൻസ്റ്റാളേഷൻ നിലവിലുള്ള ഡാറ്റ ഇല്ലാതാക്കിയേക്കാം. മറ്റൊരു ഫോൾഡർ തിരഞ്ഞെടുക്കുന്നത് പരിഗണിക്കുക."),
->>>>>>> master
     ].iter().cloned().collect();
 }

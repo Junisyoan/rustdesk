@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "RustDesk kunne ikke laste en GStreamer-komponent som kreves for skjermopptak ({})"),
         ("Relay fallback delay in seconds", "Forsinkelse før bruk av relé i sekunder"),
         ("relay-fallback-delay-tip", "Hvor lenge en allerede opprettet reléforbindelse venter på den direkte WebRTC-forbindelsen før den brukes i stedet. Øk verdien for å gi en treg direkteforbindelse mer tid; senk den for å gå raskere over til reléet på nettverk der direkte forbindelse ikke er mulig. La stå tom for standardverdien på 2.5 sekunder."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Aktiver «Lydopptak» på siden «Del skjermen» for å starte et stemmeanrop."),
         ("Keyboard shortcuts", "Hurtigtaster"),
         ("Configure shortcuts...", "Konfigurer hurtigtaster..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Klareringsperiode (dager)"),
         ("Renew trust", "Forny klarering"),
         ("install-directory-not-empty-tip", "Den valgte mappen er ikke tom. Installasjonen kan slette eksisterende data. Vurder å velge en annen mappe."),
->>>>>>> master
     ].iter().cloned().collect();
 }

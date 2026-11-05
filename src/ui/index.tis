@@ -1461,8 +1461,6 @@ function queryPeerOnline() {
     }
 }
 
-<<<<<<< HEAD
-=======
 var peer_online_cache = {};
 // Re-rendering the whole app just because a poll answered resets the open
 // settings popup's item states, so only refresh the UI when a state changed.
@@ -1479,7 +1477,6 @@ function peerOnlineStatusesChanged(statuses) {
     return changed;
 }
 
->>>>>>> master
 function checkConnectStatus() {
     handler.check_mouse_time(); // trigger connection status updater
     self.timer(1s, function() {
@@ -1539,10 +1536,7 @@ function checkConnectStatus() {
         if (handler.peer_online_updated()) {
             // Back-fill the address book's peer `status` fields from the query result.
             var statuses = JSON.parse(handler.get_peer_online_statuses() || "{}");
-<<<<<<< HEAD
-=======
             var changed = peerOnlineStatusesChanged(statuses);
->>>>>>> master
             var abChanged = false;
             for (var p in ab.peers) {
                 var id = p.id || "";
@@ -1554,13 +1548,9 @@ function checkConnectStatus() {
                     }
                 }
             }
-<<<<<<< HEAD
-            app.update();
-=======
             // Online dots are rendered only by the session lists / address book,
             // so re-render just that subtree instead of the whole app.
             if ((changed || abChanged) && app.multipleSessions) app.multipleSessions.update();
->>>>>>> master
             if (abChanged && abComponent) abComponent.update();
         }
         check_if_overlay();

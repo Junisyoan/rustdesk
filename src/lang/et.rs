@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "RustDesk ei suutnud laadida ekraani jäädvustamiseks vajalikku GStreameri komponenti ({})"),
         ("Relay fallback delay in seconds", "Viivitus enne relee kasutamist sekundites"),
         ("relay-fallback-delay-tip", "Kui kaua juba loodud releeühendus ootab otsest WebRTC-ühendust, enne kui seda selle asemel kasutatakse. Suurendage, et anda aeglasele otseühendusele rohkem aega; vähendage, et võrkudes, kus otseühendust luua ei saa, releele kiiremini üle minna. Jätke tühjaks vaikeväärtuse 2.5 sekundit kasutamiseks."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Häälkõne alustamiseks luba lehel „Jaga ekraani“ valik „Helisalvestus“."),
         ("Keyboard shortcuts", "Kiirklahvid"),
         ("Configure shortcuts...", "Seadista kiirklahve..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Usalduse kestus (päevades)"),
         ("Renew trust", "Uuenda usaldust"),
         ("install-directory-not-empty-tip", "Valitud kaust ei ole tühi. Paigaldamine võib olemasolevad andmed kustutada. Kaalu teise kausta valimist."),
->>>>>>> master
     ].iter().cloned().collect();
 }

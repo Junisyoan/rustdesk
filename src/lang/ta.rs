@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "திரைப் பதிவுக்குத் தேவையான GStreamer கூறை RustDesk ஏற்ற முடியவில்லை ({})"),
         ("Relay fallback delay in seconds", "ரிலேக்கு மாறுவதற்கான தாமதம் வினாடிகளில்"),
         ("relay-fallback-delay-tip", "ஏற்கனவே நிறுவப்பட்ட ரிலே இணைப்பு நேரடி WebRTC இணைப்புக்காக எவ்வளவு நேரம் காத்திருக்கிறது, அதன் பிறகு அதற்குப் பதிலாகப் பயன்படுத்தப்படுகிறது. மெதுவான நேரடி இணைப்புக்கு அதிக நேரம் வழங்க அதிகரிக்கவும்; நேரடி இணைப்பு சாத்தியமில்லாத பிணையங்களில் விரைவாக ரிலேக்கு மாற குறைக்கவும். இயல்புநிலை 2.5 வினாடிகளுக்கு காலியாக விடவும்."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "குரல் அழைப்பைத் தொடங்க, “திரையைப் பகிர்” பக்கத்தில் “ஒலி பிடிப்பு” என்பதை இயக்கவும்."),
         ("Keyboard shortcuts", "விசைப்பலகை குறுக்குவழிகள்"),
         ("Configure shortcuts...", "குறுக்குவழிகளை உள்ளமை..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "நம்பிக்கைக் காலம் (நாட்கள்)"),
         ("Renew trust", "நம்பிக்கையைப் புதுப்பி"),
         ("install-directory-not-empty-tip", "தேர்ந்தெடுக்கப்பட்ட கோப்புறை காலியாக இல்லை. நிறுவல் ஏற்கனவே உள்ள தரவை நீக்கக்கூடும். வேறு கோப்புறையைத் தேர்ந்தெடுப்பது நல்லது."),
->>>>>>> master
     ].iter().cloned().collect();
 }

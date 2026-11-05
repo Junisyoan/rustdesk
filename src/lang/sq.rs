@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "RustDesk nuk mundi të ngarkojë një komponent të GStreamer të nevojshëm për regjistrimin e ekranit ({})"),
         ("Relay fallback delay in seconds", "Vonesa para kalimit te releja në sekonda"),
         ("relay-fallback-delay-tip", "Sa gjatë pret një lidhje releje tashmë e vendosur lidhjen e drejtpërdrejtë WebRTC përpara se të përdoret në vend të saj. Rriteni për t'i dhënë më shumë kohë një lidhjeje të drejtpërdrejtë të ngadaltë; uleni për të kaluar më shpejt te releja në rrjete ku lidhja e drejtpërdrejtë nuk është e mundur. Lëreni bosh për vlerën e parazgjedhur prej 2.5 sekondash."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Për të nisur një telefonatë me zë, aktivizoni \"Kapja e zërit\" në faqen \"Ndaj ekranin\"."),
         ("Keyboard shortcuts", "Shkurtoret e tastierës"),
         ("Configure shortcuts...", "Konfiguro shkurtoret..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Kohëzgjatja e besimit (ditë)"),
         ("Renew trust", "Rinovo besimin"),
         ("install-directory-not-empty-tip", "Dosja e zgjedhur nuk është bosh. Instalimi mund të fshijë të dhënat ekzistuese. Konsideroni të zgjidhni një dosje tjetër."),
->>>>>>> master
     ].iter().cloned().collect();
 }

@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "تعذّر على RustDesk تحميل مكوّن GStreamer اللازم لالتقاط الشاشة ({})"),
         ("Relay fallback delay in seconds", "مهلة التراجع إلى الترحيل بالثواني"),
         ("relay-fallback-delay-tip", "المدة التي ينتظرها اتصال الترحيل القائم بالفعل الاتصالَ المباشر عبر WebRTC قبل أن يُستخدم بدلًا منه. زِدها لمنح الاتصال المباشر البطيء فرصة أكبر للفوز؛ وقلّلها للاستقرار على الترحيل أسرع في الشبكات التي يتعذر فيها الاتصال المباشر. اتركها فارغة للقيمة الافتراضية 2.5 ثانية."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "لبدء مكالمة صوتية، فعّل «لقط الصوت» في صفحة «مشاركة الشاشة»."),
         ("Keyboard shortcuts", "اختصارات لوحة المفاتيح"),
         ("Configure shortcuts...", "تهيئة الاختصارات..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "مدة الثقة (بالأيام)"),
         ("Renew trust", "تجديد الثقة"),
         ("install-directory-not-empty-tip", "المجلد المحدد ليس فارغًا. قد يؤدي التثبيت إلى حذف البيانات الموجودة. يُنصح باختيار مجلد آخر."),
->>>>>>> master
     ].iter().cloned().collect();
 }

@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "Το RustDesk δεν μπόρεσε να φορτώσει ένα στοιχείο του GStreamer που απαιτείται για την καταγραφή οθόνης ({})"),
         ("Relay fallback delay in seconds", "Καθυστέρηση πριν από τη χρήση αναμεταδότη σε δευτερόλεπτα"),
         ("relay-fallback-delay-tip", "Πόσο χρόνο περιμένει μια ήδη ενεργή σύνδεση αναμεταδότη την απευθείας σύνδεση WebRTC πριν χρησιμοποιηθεί στη θέση της. Αυξήστε το για να δώσετε σε μια αργή απευθείας σύνδεση περισσότερο χρόνο. Μειώστε το για ταχύτερη επιστροφή στον αναμεταδότη σε δίκτυα όπου δεν είναι δυνατή η απευθείας σύνδεση. Αφήστε το κενό για την προεπιλογή των 2.5 δευτερολέπτων."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Για να ξεκινήσετε φωνητική κλήση, ενεργοποιήστε την «Εγγραφή ήχου» στη σελίδα «Κοινή χρήση οθόνης»."),
         ("Keyboard shortcuts", "Συντομεύσεις πληκτρολογίου"),
         ("Configure shortcuts...", "Διαμόρφωση συντομεύσεων..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Διάρκεια εμπιστοσύνης (ημέρες)"),
         ("Renew trust", "Ανανέωση εμπιστοσύνης"),
         ("install-directory-not-empty-tip", "Ο επιλεγμένος φάκελος δεν είναι κενός. Η εγκατάσταση ενδέχεται να διαγράψει υπάρχοντα δεδομένα. Εξετάστε το ενδεχόμενο να επιλέξετε διαφορετικό φάκελο."),
->>>>>>> master
     ].iter().cloned().collect();
 }

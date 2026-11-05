@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "RustDesk nije mogao učitati GStreamer komponentu potrebnu za snimanje zaslona ({})"),
         ("Relay fallback delay in seconds", "Odgoda prije prelaska na relej u sekundama"),
         ("relay-fallback-delay-tip", "Koliko dugo već uspostavljena relejna veza čeka izravnu WebRTC vezu prije nego što se upotrijebi umjesto nje. Povećajte da sporoj izravnoj vezi date više vremena; smanjite da se na mrežama gdje izravna veza nije moguća brže prijeđe na relej. Ostavite prazno za zadanu vrijednost od 2.5 sekunde."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Za početak glasovnog poziva omogućite „Snimanje zvuka“ na stranici „Podijeli zaslon“."),
         ("Keyboard shortcuts", "Tipkovnički prečaci"),
         ("Configure shortcuts...", "Konfiguriraj prečace..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Trajanje povjerenja (dani)"),
         ("Renew trust", "Obnovi povjerenje"),
         ("install-directory-not-empty-tip", "Odabrana mapa nije prazna. Instalacija može izbrisati postojeće podatke. Razmislite o odabiru druge mape."),
->>>>>>> master
     ].iter().cloned().collect();
 }

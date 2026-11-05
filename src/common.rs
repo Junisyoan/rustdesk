@@ -1138,18 +1138,11 @@ fn clear_software_update_url() {
 
 fn process_software_update_check_response(bytes: Bytes) -> ResultType<()> {
     let resp: hbb_common::VersionCheckResponse = serde_json::from_slice(&bytes)?;
-<<<<<<< HEAD
-    log::info!("VersionCheckResponseUrlOriginal: {}", resp.url);
-    let response_url = resp.url.replace("rustdesk/rustdesk", "Sunev/rustdesk");
-    log::info!("VersionCheckResponseUrlReplaced: {}", response_url);
-    let latest_release_version = response_url.rsplit('/').next().unwrap_or_default();
-=======
     // The version endpoint is upstream's and answers with an upstream release URL; the
     // artifacts, the metadata and its signature live in this fork's repository.
     let response_url = resp.url.replace("rustdesk/rustdesk", "Sunev/rustdesk");
     let release_id = release_id_from_update_url(&response_url)?;
     let latest_release_version = display_version_from_release_id(&release_id)?;
->>>>>>> master
 
     if get_version_number(&latest_release_version) > get_version_number(crate::VERSION) {
         #[cfg(feature = "flutter")]

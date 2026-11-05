@@ -381,66 +381,6 @@ fn update_new_version(update_msi: bool, version: &str, file_path: &PathBuf, expe
     }
 }
 
-<<<<<<< HEAD
-pub fn get_update_download_file_from_url(url: &str) -> Option<PathBuf> {
-    let parsed = url::Url::parse(url).ok()?;
-    // Check the raw prefix before Url normalizes default ports.
-    if !url.starts_with("https://github.com/")
-        || parsed.scheme() != "https"
-        || parsed.host_str() != Some("github.com")
-        || !parsed.username().is_empty()
-        || parsed.password().is_some()
-        || parsed.port().is_some()
-        || parsed.query().is_some()
-        || parsed.fragment().is_some()
-    {
-        return None;
-    }
-
-    let mut segments = parsed.path_segments()?;
-    let owner = segments.next()?;
-    let repo = segments.next()?;
-    let releases = segments.next()?;
-    let download = segments.next()?;
-    let tag = segments.next()?;
-    let filename = segments.next()?;
-
-    if owner != "Sunev"
-        || repo != "rustdesk"
-        || releases != "releases"
-        || download != "download"
-        || tag.is_empty()
-        || segments.next().is_some()
-        || !is_plain_update_filename(filename)
-    {
-        return None;
-    }
-
-    Some(std::env::temp_dir().join(filename))
-}
-
-fn is_plain_update_filename(filename: &str) -> bool {
-    if filename.is_empty()
-        || filename.contains('/')
-        || filename.contains('\\')
-        || filename.contains(':')
-    {
-        return false;
-    }
-
-    let mut components = Path::new(filename).components();
-    matches!(
-        components.next(),
-        Some(Component::Normal(name)) if name.to_str() == Some(filename)
-    ) && components.next().is_none()
-}
-
-pub fn get_download_file_from_url(url: &str) -> Option<PathBuf> {
-    get_update_download_file_from_url(url)
-}
-
-=======
->>>>>>> master
 /// Queries all active connections (remote, file-transfer, port-forward, camera, terminal)
 /// from every logged-in user's --server process via IPC.
 /// The root service cannot read connection state directly since connections

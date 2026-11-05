@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "RustDesk ekran çəkilişi üçün lazım olan GStreamer komponentini yükləyə bilmədi ({})"),
         ("Relay fallback delay in seconds", "Ötürücüyə keçid gecikməsi, saniyə"),
         ("relay-fallback-delay-tip", "Artıq qurulmuş ötürücü bağlantı birbaşa WebRTC bağlantısını nə qədər gözləyir, sonra onun əvəzinə istifadə olunur. Yavaş birbaşa bağlantıya daha çox vaxt vermək üçün artırın; birbaşa bağlantının mümkün olmadığı şəbəkələrdə ötürücüyə daha tez keçmək üçün azaldın. Standart 2.5 saniyə üçün boş buraxın."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Səsli zəngə başlamaq üçün «Ekranı paylaş» səhifəsində «Audio çəkilişi» seçimini aktivləşdirin."),
         ("Keyboard shortcuts", "Klaviatura qısayolları"),
         ("Configure shortcuts...", "Qısayolları tənzimlə..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Etibar müddəti (gün)"),
         ("Renew trust", "Etibarı yenilə"),
         ("install-directory-not-empty-tip", "Seçilmiş qovluq boş deyil. Quraşdırma mövcud məlumatları silə bilər. Başqa qovluq seçməyiniz tövsiyə olunur."),
->>>>>>> master
     ].iter().cloned().collect();
 }

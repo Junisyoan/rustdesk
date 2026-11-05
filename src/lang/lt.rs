@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "RustDesk nepavyko įkelti ekrano įrašymui reikalingo GStreamer komponento ({})"),
         ("Relay fallback delay in seconds", "Delsa prieš pereinant prie perdavimo sekundėmis"),
         ("relay-fallback-delay-tip", "Kiek laiko jau užmegztas perdavimo ryšys laukia tiesioginio WebRTC ryšio, kol bus panaudotas vietoj jo. Padidinkite, kad lėtam tiesioginiam ryšiui būtų skirta daugiau laiko; sumažinkite, kad tinkluose, kuriuose tiesioginis ryšys neįmanomas, greičiau būtų pereinama prie perdavimo. Palikite tuščią numatytajai 2.5 sekundės reikšmei."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Norėdami pradėti balso skambutį, puslapyje „Bendrinti ekraną“ įgalinkite „Garso fiksavimas“."),
         ("Keyboard shortcuts", "Spartieji klavišai"),
         ("Configure shortcuts...", "Konfigūruoti sparčiuosius klavišus..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Pasitikėjimo trukmė (dienomis)"),
         ("Renew trust", "Atnaujinti pasitikėjimą"),
         ("install-directory-not-empty-tip", "Pasirinktas aplankas nėra tuščias. Diegimas gali ištrinti esamus duomenis. Apsvarstykite galimybę pasirinkti kitą aplanką."),
->>>>>>> master
     ].iter().cloned().collect();
 }

@@ -780,10 +780,8 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("RustDesk could not load a GStreamer component needed for screen capture ({})", "RustDesk-ek ezin izan du pantaila kapturatzeko beharrezkoa den GStreamer osagai bat kargatu ({})"),
         ("Relay fallback delay in seconds", "Errelera itzultzeko atzerapena segundotan"),
         ("relay-fallback-delay-tip", "Dagoeneko ezarritako errele-konexio batek WebRTC konexio zuzenari zenbat denbora itxaroten dion, haren ordez erabili aurretik. Handitu konexio zuzen motel bati denbora gehiago emateko; txikitu konexio zuzena egin ezin den sareetan lehenago errelera itzultzeko. Utzi hutsik 2.5 segundoko balio lehenetsirako."),
-<<<<<<< HEAD
         ("To start a voice call, enable \"Audio capture\" on the \"Screen share\" page.", ""),
         ("Switch client", ""),
-=======
         ("To start a voice call, enable \"Audio capture\" on the \"Share screen\" page.", "Ahots-dei bat hasteko, gaitu \"Audio-grabazioa\" \"Partekatu pantaila\" orrian."),
         ("Keyboard shortcuts", "Laster-teklak"),
         ("Configure shortcuts...", "Konfiguratu laster-teklak..."),
@@ -828,6 +826,5 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Trust duration (days)", "Konfiantzaren iraupena (egunak)"),
         ("Renew trust", "Berritu konfiantza"),
         ("install-directory-not-empty-tip", "Hautatutako karpeta ez dago hutsik. Instalazioak lehendik dauden datuak ezaba ditzake. Beste karpeta bat aukeratzea gomendatzen da."),
->>>>>>> master
     ].iter().cloned().collect();
 }
