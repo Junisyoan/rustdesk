@@ -6,9 +6,10 @@ app_path=$1
 identity=$2
 entitlements=$3
 
-sign_args=(--force --options runtime --sign "$identity")
+sign_args=(--force --sign "$identity")
+# Ad-hoc signatures have no Team ID for hardened runtime's library validation.
 if [[ "$identity" != "-" ]]; then
-  sign_args+=(--timestamp)
+  sign_args+=(--options runtime --timestamp)
 fi
 
 frameworks_path="$app_path/Contents/Frameworks"

@@ -1130,6 +1130,19 @@ jobs:
           # Opt-in, and its macOS tests run nowhere else.
           cargo test --locked --release -p clipboard --features unix-file-copy-paste
 
+      - name: Ad-hoc sign and verify macOS app
+        if: env.MACOS_P12_BASE64 == null && env.UPLOAD_ARTIFACT == 'true'
+        run: |
+          bash ./.github/scripts/test-sign-macos-app.sh
+          bash ./.github/scripts/sign-macos-app.sh \
+            ./flutter/build/macos/Build/Products/Release/RustDesk.app \
+            - ./flutter/macos/Runner/Release.entitlements
+          reported_version="$(./flutter/build/macos/Build/Products/Release/RustDesk.app/Contents/MacOS/RustDesk --version)"
+          if [ "$reported_version" != "$VERSION" ]; then
+            echo "::error::RustDesk reports version '$reported_version', expected '$VERSION'"
+            exit 1
+          fi
+
       - name: create unsigned dmg
         if: env.UPLOAD_ARTIFACT == 'true'
         run: |
